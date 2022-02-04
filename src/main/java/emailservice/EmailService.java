@@ -20,7 +20,7 @@ public class EmailService {
     }
 
     private boolean isValid(String email) {
-        return email.matches("^[^@][^A-Z]*@[^\\.][^A-Z]*\\.[^A-Z]*");
+        return email.matches("^[^@][^A-Z]*@[^\\.][^A-Z]*\\.[^A-Z]*");   //kiírás szerint
 //        return email.matches("^[^@.][a-z.]+@[^\\.][a-z.]+\\.[a-z.]+[^@.]$");
 //        return email.matches("^[^@.0-9][a-z0-9.]+@[^\\.0-9][a-z0-9.]+\\.[a-z0-9.]+[^@.0-9]$");
 //        return email.matches("^[^@][^A-Z\\n]*@[^\\.\\n][^A-Z\\n]*\\.[^\\.\\n][^A-Z\\n]*");
