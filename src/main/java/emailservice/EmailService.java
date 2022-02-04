@@ -20,12 +20,7 @@ public class EmailService {
     }
 
     private boolean isValid(String email) {
-        String last = String.valueOf(email.charAt(email.length() - 1));
-        String first = String.valueOf(email.charAt(0));
-        return email.equals(email.toLowerCase()) && email.contains("@") && email.indexOf("@") != 0
-                && email.contains(".") && email.indexOf(".") != 0
-                && !"@.".contains(last) && !"@.".contains(first)
-                && email.toCharArray()[email.lastIndexOf("@") + 1] != '.';
+        return email.matches("^[^@.][a-z.]+@[^\\.][a-z.]+\\.[a-z.]+[^@.]$");
     }
 
     public void sendEmail(String from, String to, String subject, String content) {
